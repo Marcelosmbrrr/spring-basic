@@ -21,10 +21,12 @@ public class UserEntity {
 
     @Column(name = "username", nullable = false)
     @NotBlank(message = "Username is required")
+    @Size(min = 3, message = "Must have at least 3 characters")
     private String username;
 
     @Column(name = "name", nullable = false)
     @NotBlank(message = "Name is required")
+    @Size(min = 3, message = "Must have at least 3 characters")
     private String name;
 
     @Column(name = "email", unique = true, nullable = false)
